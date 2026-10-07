@@ -1,0 +1,692 @@
+{
+  "dataset_name": "SMS Spam Collection (UCI Machine Learning Repository)",
+  "total_records": 5572,
+  "train_records": 4457,
+  "test_records": 1115,
+  "train_test_split": "80% Train / 20% Test (Stratified, random_state=42)",
+  "last_trained_timestamp": "2026-10-04 14:20:27 UTC",
+  "vectorizer_info": {
+    "type": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 4000,
+    "sublinear_tf": true,
+    "vocabulary_size": 4000,
+    "bow_vocabulary_size": 4000,
+    "sample_vocabulary": [
+      "guys",
+      "close",
+      "come",
+      "town",
+      "just",
+      "important",
+      "2moro",
+      "ok",
+      "sry",
+      "knw",
+      "askd",
+      "ll",
+      "yeah",
+      "swing",
+      "bit",
+      "got",
+      "things",
+      "care",
+      "ll swing",
+      "got things",
+      "shall",
+      "book",
+      "half",
+      "thanks",
+      "message",
+      "really",
+      "appreciate",
+      "sure",
+      "process",
+      "direct"
+    ]
+  },
+  "models": {
+    "naive_bayes": {
+      "model_id": "naive_bayes",
+      "model_name": "Multinomial Naive Bayes",
+      "algorithm": "MultinomialNB (alpha=0.1)",
+      "vectorizer": "TF-IDF (1-2 ngrams, sublinear_tf=True, max_features=4000)",
+      "accuracy": 0.9883,
+      "precision": 0.9789,
+      "recall": 0.9329,
+      "f1_score": 0.9553,
+      "roc_auc": 0.9937,
+      "training_time_s": 0.255,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            963,
+            3
+          ],
+          [
+            10,
+            139
+          ]
+        ],
+        "tn": 963,
+        "fp": 3,
+        "fn": 10,
+        "tp": 139,
+        "samples": {
+          "tn": [
+            {
+              "index": 0,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "No need to buy lunch for me.. I eat maggi mee.."
+            },
+            {
+              "index": 1,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "Ok im not sure what time i finish tomorrow but i wanna spend the evening with you cos that would be vewy vewy lubly! Love me xxx"
+            },
+            {
+              "index": 2,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "Waiting in e car 4 my mum lor. U leh? Reach home already?"
+            },
+            {
+              "index": 4,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "If you r @ home then come down within 5 min"
+            },
+            {
+              "index": 5,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "No need lar. Jus testing e phone card. Dunno network not gd i thk. Me waiting 4 my sis 2 finish bathing so i can bathe. Dun disturb u liao u cleaning ur room."
+            }
+          ],
+          "fp": [
+            {
+              "index": 347,
+              "actual": "ham",
+              "predicted": "spam",
+              "message": "MY NO. IN LUTON 0125698789 RING ME IF UR AROUND! H*"
+            },
+            {
+              "index": 611,
+              "actual": "ham",
+              "predicted": "spam",
+              "message": "No. She's currently in scotland for that."
+            },
+            {
+              "index": 782,
+              "actual": "ham",
+              "predicted": "spam",
+              "message": "How much would it cost to hire a hitman"
+            }
+          ],
+          "fn": [
+            {
+              "index": 165,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Hi if ur lookin 4 saucy daytime fun wiv busty married woman Am free all next week Chat now 2 sort time 09099726429 JANINExx Calls\u00a31/minMobsmoreLKPOBOX177HP51FL"
+            },
+            {
+              "index": 219,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Sorry I missed your call let's talk when you have the time. I'm on 07090201529"
+            },
+            {
+              "index": 235,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Latest News! Police station toilet stolen, cops have nothing to go on!"
+            },
+            {
+              "index": 478,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "For sale - arsenal dartboard. Good condition but no doubles or trebles!"
+            },
+            {
+              "index": 606,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Email AlertFrom: Jeri StewartSize: 2KBSubject: Low-cost prescripiton drvgsTo listen to email call 123"
+            }
+          ],
+          "tp": [
+            {
+              "index": 3,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "You have won ?1,000 cash or a ?2,000 prize! To claim, call09050000327"
+            },
+            {
+              "index": 23,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "You are now unsubscribed all services. Get tons of sexy babes or hunks straight to your phone! go to http://gotbabes.co.uk. No subscriptions."
+            },
+            {
+              "index": 35,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "Wanna get laid 2nite? Want real Dogging locations sent direct to ur mobile? Join the UK's largest Dogging Network. Txt PARK to 69696 now! Nyt. ec2a. 3lp \u00a31.50/msg"
+            },
+            {
+              "index": 40,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "Do you want 750 anytime any network mins 150 text and a NEW video phone for only five pounds per week call 08000776320 now or reply for delivery Tomorrow"
+            },
+            {
+              "index": 44,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "FreeMsg Hey there darling it's been 3 week's now and no word back! I'd like some fun you up for it still? Tb ok! XxX std chgs to send, \u00a31.50 to rcv"
+            }
+          ]
+        }
+      },
+      "inference_time_ms": 4.2
+    },
+    "logistic_regression": {
+      "model_id": "logistic_regression",
+      "model_name": "Logistic Regression",
+      "algorithm": "LogisticRegression (C=1.0, max_iter=1000)",
+      "vectorizer": "TF-IDF (1-2 ngrams, sublinear_tf=True, max_features=4000)",
+      "accuracy": 0.9785,
+      "precision": 0.9921,
+      "recall": 0.8456,
+      "f1_score": 0.913,
+      "roc_auc": 0.9915,
+      "training_time_s": 1.076,
+      "confusion_matrix": {
+        "matrix": [
+          [
+            965,
+            1
+          ],
+          [
+            23,
+            126
+          ]
+        ],
+        "tn": 965,
+        "fp": 1,
+        "fn": 23,
+        "tp": 126,
+        "samples": {
+          "tn": [
+            {
+              "index": 0,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "No need to buy lunch for me.. I eat maggi mee.."
+            },
+            {
+              "index": 1,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "Ok im not sure what time i finish tomorrow but i wanna spend the evening with you cos that would be vewy vewy lubly! Love me xxx"
+            },
+            {
+              "index": 2,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "Waiting in e car 4 my mum lor. U leh? Reach home already?"
+            },
+            {
+              "index": 4,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "If you r @ home then come down within 5 min"
+            },
+            {
+              "index": 5,
+              "actual": "ham",
+              "predicted": "ham",
+              "message": "No need lar. Jus testing e phone card. Dunno network not gd i thk. Me waiting 4 my sis 2 finish bathing so i can bathe. Dun disturb u liao u cleaning ur room."
+            }
+          ],
+          "fp": [
+            {
+              "index": 347,
+              "actual": "ham",
+              "predicted": "spam",
+              "message": "MY NO. IN LUTON 0125698789 RING ME IF UR AROUND! H*"
+            }
+          ],
+          "fn": [
+            {
+              "index": 23,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "You are now unsubscribed all services. Get tons of sexy babes or hunks straight to your phone! go to http://gotbabes.co.uk. No subscriptions."
+            },
+            {
+              "index": 44,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "FreeMsg Hey there darling it's been 3 week's now and no word back! I'd like some fun you up for it still? Tb ok! XxX std chgs to send, \u00a31.50 to rcv"
+            },
+            {
+              "index": 122,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Dear Voucher Holder 2 claim your 1st class airport lounge passes when using Your holiday voucher call 08704439680. When booking quote 1st class x 2"
+            },
+            {
+              "index": 126,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "sexy sexy cum and text me im wet and warm and ready for some porn! u up for some fun? THIS MSG IS FREE RECD MSGS 150P INC VAT 2 CANCEL TEXT STOP"
+            },
+            {
+              "index": 219,
+              "actual": "spam",
+              "predicted": "ham",
+              "message": "Sorry I missed your call let's talk when you have the time. I'm on 07090201529"
+            }
+          ],
+          "tp": [
+            {
+              "index": 3,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "You have won ?1,000 cash or a ?2,000 prize! To claim, call09050000327"
+            },
+            {
+              "index": 35,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "Wanna get laid 2nite? Want real Dogging locations sent direct to ur mobile? Join the UK's largest Dogging Network. Txt PARK to 69696 now! Nyt. ec2a. 3lp \u00a31.50/msg"
+            },
+            {
+              "index": 40,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "Do you want 750 anytime any network mins 150 text and a NEW video phone for only five pounds per week call 08000776320 now or reply for delivery Tomorrow"
+            },
+            {
+              "index": 65,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "URGENT! Your Mobile No was awarded a \u00a32,000 Bonus Caller Prize on 1/08/03! This is our 2nd attempt to contact YOU! Call 0871-4719-523 BOX95QU BT National Rate"
+            },
+            {
+              "index": 67,
+              "actual": "spam",
+              "predicted": "spam",
+              "message": "Todays Voda numbers ending with 7634 are selected to receive a \u00a3350 reward. If you have a match please call 08712300220 quoting claim code 7684 standard rates apply."
+            }
+          ]
+        }
+      },
+      "inference_time_ms": 3.64
+    }
+  },
+  "threshold_analysis": {
+    "naive_bayes": [
+      {
+        "threshold": 0.1,
+        "precision": 0.689,
+        "recall": 0.9664,
+        "f1_score": 0.8045,
+        "tp": 144,
+        "fp": 65,
+        "fn": 5,
+        "tn": 901
+      },
+      {
+        "threshold": 0.2,
+        "precision": 0.9057,
+        "recall": 0.9664,
+        "f1_score": 0.9351,
+        "tp": 144,
+        "fp": 15,
+        "fn": 5,
+        "tn": 951
+      },
+      {
+        "threshold": 0.3,
+        "precision": 0.953,
+        "recall": 0.953,
+        "f1_score": 0.953,
+        "tp": 142,
+        "fp": 7,
+        "fn": 7,
+        "tn": 959
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.9658,
+        "recall": 0.9463,
+        "f1_score": 0.9559,
+        "tp": 141,
+        "fp": 5,
+        "fn": 8,
+        "tn": 961
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.9789,
+        "recall": 0.9329,
+        "f1_score": 0.9553,
+        "tp": 139,
+        "fp": 3,
+        "fn": 10,
+        "tn": 963
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.9857,
+        "recall": 0.9262,
+        "f1_score": 0.955,
+        "tp": 138,
+        "fp": 2,
+        "fn": 11,
+        "tn": 964
+      },
+      {
+        "threshold": 0.7,
+        "precision": 1.0,
+        "recall": 0.906,
+        "f1_score": 0.9507,
+        "tp": 135,
+        "fp": 0,
+        "fn": 14,
+        "tn": 966
+      },
+      {
+        "threshold": 0.8,
+        "precision": 1.0,
+        "recall": 0.8658,
+        "f1_score": 0.9281,
+        "tp": 129,
+        "fp": 0,
+        "fn": 20,
+        "tn": 966
+      },
+      {
+        "threshold": 0.9,
+        "precision": 1.0,
+        "recall": 0.8456,
+        "f1_score": 0.9164,
+        "tp": 126,
+        "fp": 0,
+        "fn": 23,
+        "tn": 966
+      }
+    ],
+    "logistic_regression": [
+      {
+        "threshold": 0.1,
+        "precision": 0.788,
+        "recall": 0.9732,
+        "f1_score": 0.8709,
+        "tp": 145,
+        "fp": 39,
+        "fn": 4,
+        "tn": 927
+      },
+      {
+        "threshold": 0.2,
+        "precision": 0.9463,
+        "recall": 0.9463,
+        "f1_score": 0.9463,
+        "tp": 141,
+        "fp": 8,
+        "fn": 8,
+        "tn": 958
+      },
+      {
+        "threshold": 0.3,
+        "precision": 0.9856,
+        "recall": 0.9195,
+        "f1_score": 0.9514,
+        "tp": 137,
+        "fp": 2,
+        "fn": 12,
+        "tn": 964
+      },
+      {
+        "threshold": 0.4,
+        "precision": 0.9926,
+        "recall": 0.8993,
+        "f1_score": 0.9437,
+        "tp": 134,
+        "fp": 1,
+        "fn": 15,
+        "tn": 965
+      },
+      {
+        "threshold": 0.5,
+        "precision": 0.9921,
+        "recall": 0.8456,
+        "f1_score": 0.913,
+        "tp": 126,
+        "fp": 1,
+        "fn": 23,
+        "tn": 965
+      },
+      {
+        "threshold": 0.6,
+        "precision": 0.9916,
+        "recall": 0.7919,
+        "f1_score": 0.8806,
+        "tp": 118,
+        "fp": 1,
+        "fn": 31,
+        "tn": 965
+      },
+      {
+        "threshold": 0.7,
+        "precision": 0.9904,
+        "recall": 0.6913,
+        "f1_score": 0.8142,
+        "tp": 103,
+        "fp": 1,
+        "fn": 46,
+        "tn": 965
+      },
+      {
+        "threshold": 0.8,
+        "precision": 0.9851,
+        "recall": 0.443,
+        "f1_score": 0.6111,
+        "tp": 66,
+        "fp": 1,
+        "fn": 83,
+        "tn": 965
+      },
+      {
+        "threshold": 0.9,
+        "precision": 0.9655,
+        "recall": 0.1879,
+        "f1_score": 0.3146,
+        "tp": 28,
+        "fp": 1,
+        "fn": 121,
+        "tn": 965
+      }
+    ]
+  },
+  "best_model": {
+    "model_id": "naive_bayes",
+    "model_name": "Multinomial Naive Bayes",
+    "reason": "Multinomial Naive Bayes achieved higher F1-score (0.9553 vs 0.9130) with recall of 0.9329."
+  },
+  "feature_importance": {
+    "top_spam_indicators": [
+      {
+        "term": "numseq",
+        "weight": 11.2028
+      },
+      {
+        "term": "currency",
+        "weight": 4.7133
+      },
+      {
+        "term": "url",
+        "weight": 4.2324
+      },
+      {
+        "term": "txt",
+        "weight": 3.4532
+      },
+      {
+        "term": "reply",
+        "weight": 3.2621
+      },
+      {
+        "term": "mobile",
+        "weight": 2.9561
+      },
+      {
+        "term": "free",
+        "weight": 2.5108
+      },
+      {
+        "term": "service",
+        "weight": 2.4335
+      },
+      {
+        "term": "claim",
+        "weight": 2.4308
+      },
+      {
+        "term": "stop",
+        "weight": 2.3379
+      },
+      {
+        "term": "text",
+        "weight": 2.2367
+      },
+      {
+        "term": "150p",
+        "weight": 2.1175
+      },
+      {
+        "term": "uk",
+        "weight": 2.1146
+      },
+      {
+        "term": "ringtone",
+        "weight": 1.8798
+      },
+      {
+        "term": "won",
+        "weight": 1.8725
+      },
+      {
+        "term": "prize",
+        "weight": 1.7517
+      },
+      {
+        "term": "win",
+        "weight": 1.7222
+      },
+      {
+        "term": "18",
+        "weight": 1.6372
+      },
+      {
+        "term": "games",
+        "weight": 1.6253
+      },
+      {
+        "term": "tone",
+        "weight": 1.6219
+      }
+    ],
+    "top_ham_indicators": [
+      {
+        "term": "ok",
+        "weight": -1.716
+      },
+      {
+        "term": "ll",
+        "weight": -1.4071
+      },
+      {
+        "term": "da",
+        "weight": -1.2643
+      },
+      {
+        "term": "gt",
+        "weight": -1.2529
+      },
+      {
+        "term": "lt",
+        "weight": -1.2405
+      },
+      {
+        "term": "got",
+        "weight": -1.1815
+      },
+      {
+        "term": "come",
+        "weight": -1.175
+      },
+      {
+        "term": "home",
+        "weight": -1.161
+      },
+      {
+        "term": "good",
+        "weight": -1.0991
+      },
+      {
+        "term": "lt gt",
+        "weight": -1.072
+      },
+      {
+        "term": "hey",
+        "weight": -1.0589
+      },
+      {
+        "term": "lor",
+        "weight": -1.0515
+      },
+      {
+        "term": "sorry",
+        "weight": -1.0431
+      },
+      {
+        "term": "going",
+        "weight": -0.9941
+      },
+      {
+        "term": "later",
+        "weight": -0.9918
+      },
+      {
+        "term": "way",
+        "weight": -0.8215
+      },
+      {
+        "term": "yeah",
+        "weight": -0.8001
+      },
+      {
+        "term": "wat",
+        "weight": -0.7949
+      },
+      {
+        "term": "oh",
+        "weight": -0.7697
+      },
+      {
+        "term": "doing",
+        "weight": -0.7619
+      }
+    ]
+  }
+}

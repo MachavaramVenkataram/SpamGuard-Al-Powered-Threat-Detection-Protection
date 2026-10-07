@@ -1,0 +1,341 @@
+{
+  "total_messages": 5572,
+  "spam_count": 747,
+  "ham_count": 4825,
+  "spam_percentage": 13.41,
+  "ham_percentage": 86.59,
+  "avg_char_length": 80.49,
+  "avg_word_count": 15.6,
+  "ham_stats": {
+    "mean_char_length": 71.48,
+    "median_char_length": 52.0,
+    "min_char_length": 2,
+    "max_char_length": 910,
+    "mean_word_count": 14.31
+  },
+  "spam_stats": {
+    "mean_char_length": 138.67,
+    "median_char_length": 149.0,
+    "min_char_length": 13,
+    "max_char_length": 223,
+    "mean_word_count": 23.91
+  },
+  "sample_records": [
+    {
+      "id": 947,
+      "label": "spam",
+      "message": "Ur cash-balance is currently 500 pounds - to maximize ur cash-in now send GO to 86688 only 150p/msg. CC: 08718720201 PO BOX 114/14 TCR/W1"
+    },
+    {
+      "id": 1311,
+      "label": "ham",
+      "message": "I.ll always be there, even if its just in spirit. I.ll get a bb soon. Just trying to be sure i need it."
+    },
+    {
+      "id": 1456,
+      "label": "spam",
+      "message": "Summers finally here! Fancy a chat or flirt with sexy singles in yr area? To get MATCHED up just reply SUMMER now. Free 2 Join. OptOut txt STOP Help08714742804"
+    },
+    {
+      "id": 3714,
+      "label": "ham",
+      "message": "If i not meeting \u00fc all rite then i'll go home lor. If \u00fc dun feel like comin it's ok."
+    },
+    {
+      "id": 673,
+      "label": "spam",
+      "message": "Get ur 1st RINGTONE FREE NOW! Reply to this msg with TONE. Gr8 TOP 20 tones to your phone every week just \u00a31.50 per wk 2 opt out send STOP 08452810071 16"
+    },
+    {
+      "id": 548,
+      "label": "ham",
+      "message": "Sorry that took so long, omw now"
+    },
+    {
+      "id": 2881,
+      "label": "spam",
+      "message": "Last Chance! Claim ur \u00a3150 worth of discount vouchers today! Text SHOP to 85023 now! SavaMob, offers mobile! T Cs SavaMob POBOX84, M263UZ. \u00a33.00 Sub. 16"
+    },
+    {
+      "id": 3184,
+      "label": "ham",
+      "message": "Dunno i juz askin cos i got a card got 20% off 4 a salon called hair sense so i tot it's da one \u00fc cut ur hair. "
+    },
+    {
+      "id": 1324,
+      "label": "ham",
+      "message": "I thk 50 shd be ok he said plus minus 10.. Did \u00fc leave a line in between paragraphs?"
+    },
+    {
+      "id": 1853,
+      "label": "spam",
+      "message": "This is the 2nd time we have tried 2 contact u. U have won the 750 Pound prize. 2 claim is easy, call 08718726970 NOW! Only 10p per min. BT-national-rate "
+    }
+  ],
+  "top_ham_words": [
+    {
+      "word": "gt",
+      "count": 318
+    },
+    {
+      "word": "lt",
+      "count": 316
+    },
+    {
+      "word": "get",
+      "count": 305
+    },
+    {
+      "word": "ok",
+      "count": 288
+    },
+    {
+      "word": "go",
+      "count": 252
+    },
+    {
+      "word": "ur",
+      "count": 247
+    },
+    {
+      "word": "call",
+      "count": 238
+    },
+    {
+      "word": "know",
+      "count": 237
+    },
+    {
+      "word": "good",
+      "count": 235
+    },
+    {
+      "word": "like",
+      "count": 234
+    },
+    {
+      "word": "got",
+      "count": 233
+    },
+    {
+      "word": "come",
+      "count": 230
+    },
+    {
+      "word": "day",
+      "count": 210
+    },
+    {
+      "word": "love",
+      "count": 205
+    },
+    {
+      "word": "time",
+      "count": 202
+    },
+    {
+      "word": "going",
+      "count": 169
+    },
+    {
+      "word": "one",
+      "count": 168
+    },
+    {
+      "word": "home",
+      "count": 165
+    },
+    {
+      "word": "want",
+      "count": 165
+    },
+    {
+      "word": "lor",
+      "count": 162
+    },
+    {
+      "word": "need",
+      "count": 159
+    },
+    {
+      "word": "sorry",
+      "count": 157
+    },
+    {
+      "word": "still",
+      "count": 151
+    },
+    {
+      "word": "da",
+      "count": 150
+    },
+    {
+      "word": "see",
+      "count": 140
+    }
+  ],
+  "top_spam_words": [
+    {
+      "word": "numseq",
+      "count": 691
+    },
+    {
+      "word": "call",
+      "count": 355
+    },
+    {
+      "word": "currency",
+      "count": 327
+    },
+    {
+      "word": "free",
+      "count": 224
+    },
+    {
+      "word": "txt",
+      "count": 161
+    },
+    {
+      "word": "ur",
+      "count": 144
+    },
+    {
+      "word": "mobile",
+      "count": 127
+    },
+    {
+      "word": "text",
+      "count": 124
+    },
+    {
+      "word": "stop",
+      "count": 123
+    },
+    {
+      "word": "claim",
+      "count": 113
+    },
+    {
+      "word": "url",
+      "count": 106
+    },
+    {
+      "word": "reply",
+      "count": 104
+    },
+    {
+      "word": "prize",
+      "count": 93
+    },
+    {
+      "word": "get",
+      "count": 86
+    },
+    {
+      "word": "cash",
+      "count": 76
+    },
+    {
+      "word": "send",
+      "count": 71
+    },
+    {
+      "word": "new",
+      "count": 69
+    },
+    {
+      "word": "nokia",
+      "count": 67
+    },
+    {
+      "word": "150p",
+      "count": 65
+    },
+    {
+      "word": "urgent",
+      "count": 63
+    },
+    {
+      "word": "win",
+      "count": 62
+    },
+    {
+      "word": "week",
+      "count": 60
+    },
+    {
+      "word": "tone",
+      "count": 60
+    },
+    {
+      "word": "50",
+      "count": 57
+    },
+    {
+      "word": "service",
+      "count": 56
+    }
+  ],
+  "length_distribution": [
+    {
+      "range": "0-20",
+      "ham": 153,
+      "spam": 2
+    },
+    {
+      "range": "21-40",
+      "ham": 1519,
+      "spam": 6
+    },
+    {
+      "range": "41-60",
+      "ham": 1030,
+      "spam": 16
+    },
+    {
+      "range": "61-80",
+      "ham": 610,
+      "spam": 24
+    },
+    {
+      "range": "81-100",
+      "ham": 412,
+      "spam": 26
+    },
+    {
+      "range": "101-120",
+      "ham": 269,
+      "spam": 57
+    },
+    {
+      "range": "121-140",
+      "ham": 263,
+      "spam": 121
+    },
+    {
+      "range": "141-160",
+      "ham": 334,
+      "spam": 401
+    },
+    {
+      "range": "161-180",
+      "ham": 91,
+      "spam": 89
+    },
+    {
+      "range": "181-200",
+      "ham": 30,
+      "spam": 4
+    },
+    {
+      "range": "201-300",
+      "ham": 72,
+      "spam": 1
+    },
+    {
+      "range": "300+",
+      "ham": 42,
+      "spam": 0
+    }
+  ]
+}

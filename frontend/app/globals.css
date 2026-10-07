@@ -1,0 +1,347 @@
+@import "tailwindcss";
+
+:root {
+  --bg-ivory: #FAF9F6;
+  --surface-white: #FFFFFF;
+  --text-graphite: #202124;
+  --text-muted: #5F6368;
+  --border-subtle: #E8E6E1;
+  --border-strong: #D5D2CB;
+
+  /* Default Theme: Ivory + Electric Violet */
+  --accent: #6D5DFB;
+  --accent-hover: #5B4CE0;
+  --accent-light: #F2F0FF;
+  --accent-border: #DCD8FF;
+  --accent-rgb: 109, 93, 251;
+
+  /* Multi-Accent Semantic Colors */
+  --color-mint: #10B981;
+  --color-mint-light: #ECFDF5;
+  --color-teal: #0D9488;
+  --color-cyan: #06B6D4;
+  --color-amber: #F59E0B;
+  --color-amber-light: #FFFBEB;
+  --color-gold: #D97706;
+  --color-coral: #F97316;
+  --color-coral-light: #FFF7ED;
+  --color-rose: #F43F5E;
+  --color-rose-light: #FFF1F2;
+  --color-ruby: #E11D48;
+  --color-lavender: #C4B5FD;
+}
+
+/* Theme 2: White + Coral */
+[data-theme="coral"] {
+  --accent: #F97316;
+  --accent-hover: #EA580C;
+  --accent-light: #FFF7ED;
+  --accent-border: #FED7AA;
+  --accent-rgb: 249, 115, 22;
+}
+
+/* Theme 3: Pearl + Mint */
+[data-theme="mint"] {
+  --accent: #10B981;
+  --accent-hover: #059669;
+  --accent-light: #ECFDF5;
+  --accent-border: #A7F3D0;
+  --accent-rgb: 16, 185, 129;
+}
+
+/* Theme 4: Cream + Amber */
+[data-theme="amber"] {
+  --accent: #D97706;
+  --accent-hover: #B45309;
+  --accent-light: #FFFBEB;
+  --accent-border: #FDE68A;
+  --accent-rgb: 217, 119, 6;
+}
+
+/* Theme 5: White + Rose */
+[data-theme="rose"] {
+  --accent: #E11D48;
+  --accent-hover: #BE123C;
+  --accent-light: #FFF1F2;
+  --accent-border: #FECDD3;
+  --accent-rgb: 225, 29, 72;
+}
+
+/* Theme 6: Lavender + Indigo */
+[data-theme="indigo"] {
+  --accent: #4F46E5;
+  --accent-hover: #4338CA;
+  --accent-light: #EEF2FF;
+  --accent-border: #C7D2FE;
+  --accent-rgb: 79, 70, 229;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  body {
+    background-color: var(--bg-ivory);
+    color: var(--text-graphite);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+}
+
+/* Dot grid background pattern */
+.bg-grid-ivory {
+  background-image: radial-gradient(rgba(100, 116, 139, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Fine subtle mesh gradient */
+.bg-mesh-subtle {
+  background: 
+    radial-gradient(at 0% 0%, rgba(var(--accent-rgb), 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(244, 63, 94, 0.03) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.03) 0px, transparent 50%),
+    #FAF9F6;
+}
+
+/* Card surfaces */
+.surface-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 1px 3px 0 rgba(32, 33, 36, 0.02), 0 1px 2px -1px rgba(32, 33, 36, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.surface-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 10px 25px -4px rgba(32, 33, 36, 0.06), 0 4px 8px -2px rgba(32, 33, 36, 0.03);
+}
+
+/* Glassmorphism */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.82);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 230, 225, 0.7);
+}
+
+/* Accent utilities */
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+.border-accent {
+  border-color: var(--accent);
+}
+
+.border-accent-light {
+  border-color: var(--accent-border);
+}
+
+/* Scanner Laser Line Animation */
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 2.2s ease-in-out infinite alternate;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(var(--accent-rgb), 0.12) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D2CB;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A59E;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide Next.js development indicator badge */
+nextjs-portal,
+[data-nextjs-dev-indicator],
+#nextjs-dev-indicator {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* ==========================================================================
+   PREMIUM UNIVERSAL SCANNER EXPERIENCE STYLES
+   ========================================================================== */
+
+/* Faint Animated Scanning Grid Drift */
+@keyframes gridDrift {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 48px 48px;
+  }
+}
+
+.bg-scanner-grid {
+  background-image: 
+    linear-gradient(to right, rgba(109, 93, 251, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(109, 93, 251, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+  animation: gridDrift 28s linear infinite;
+}
+
+/* Periodic Subtle Shimmer for Top Product Badge */
+@keyframes badgeSweep {
+  0%, 70% {
+    transform: translateX(-140%);
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(250%);
+    opacity: 0;
+  }
+}
+
+.animate-badge-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-badge-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: badgeSweep 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Ambient Breathing Glow */
+@keyframes ambientBreathe {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.99);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambientBreathe 4s ease-in-out infinite;
+}
+
+/* Scanner Corner Bracket Accents */
+.scanner-corner-tl {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #8B7FFD;
+  border-left: 2px solid #8B7FFD;
+  border-top-left-radius: 6px;
+  pointer-events: none;
+}
+
+.scanner-corner-tr {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid #8B7FFD;
+  border-right: 2px solid #8B7FFD;
+  border-top-right-radius: 6px;
+  pointer-events: none;
+}
+
+.scanner-corner-bl {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #8B7FFD;
+  border-left: 2px solid #8B7FFD;
+  border-bottom-left-radius: 6px;
+  pointer-events: none;
+}
+
+.scanner-corner-br {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid #8B7FFD;
+  border-right: 2px solid #8B7FFD;
+  border-bottom-right-radius: 6px;
+  pointer-events: none;
+}
+
+
